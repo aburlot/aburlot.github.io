@@ -6,6 +6,13 @@ body {
   margin: 0;
 }
 
+@media (max-width: 799px) {
+  body {
+    padding: 15px;
+    font-size: 0.95em;
+  }
+}
+
 /* Partie supérieure de la page */
 body #preamble {
     width: 700px;
@@ -47,11 +54,17 @@ body .nav ul li a {
 /*   font-size: 2em; */
 /* } */
 
-body #content,
-body #postamble {
-    margin: 0 auto;
-    max-width: 700px !important;
-    width: 700px !important;
+@media (min-width: 800 px) {
+    body #content,
+    body #postamble {
+	margin: 0 auto;
+	max-width: 700px !important;
+	width: 700px !important;
+    }
+}
+
+body #content {
+  margin-top: 10px;
 }
 
 h1 {
