@@ -94,6 +94,10 @@ body #postamble {
 }
 /* Fin structure */
 
+body h1.title {
+  display: none;
+}
+
 h1 {
     font-size: 2.1em;
     font-weight: bold;
