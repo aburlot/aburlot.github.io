@@ -1,23 +1,25 @@
 body {
-  font-family: "fira sans", sans;
-  line-height: 1.5em;
-  font-size: 18px;
-  background: #F5F5ED;
-  margin: 0;
+    font-family: "fira sans", sans;
+    line-height: 1.5em;
+    font-size: 18px;
+    background: #F5F5ED;
+    margin: 0;
 }
 
 @media (max-width: 799px) {
-  body {
-    padding: 15px;
-    font-size: 0.95em;
-  }
+    body {
+	padding: 15px;
+	font-size: 0.95em;
+    }
 }
 
 /* Partie supérieure de la page */
-body #preamble {
-    width: 700px;
-    margin: 0px auto;
-    position: relative;
+@media (min-width: 800px) {
+    body #preamble {
+	width: 700px;
+	margin: 0px auto;
+	position: relative;
+    }
 }
 
 /* Partie intro */
@@ -28,101 +30,126 @@ body .intro {
 
 /* Pour le menu ul*/
 body .nav {
-  text-align: center;
-  margin-top: 30px;
-  border-bottom: 1px solid #e2e2e2;
-  font-size: 12px;
-  text-transform: uppercase;
+    text-align: center;
+    margin-top: 30px;
+    border-bottom: 1px solid #e2e2e2;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 body .nav ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 body .nav ul li {
-  color: #999;
-  display: inline-block;
-  margin: 0;
+    color: #999;
+    display: inline-block;
+    margin: 0;
 }
 body .nav ul li a {
-  display: inline-block;
-  padding-right: 6px;
-  border-radius: 0;
-  font-weight: normal;
-  color: #6a6a6a;
+    display: inline-block;
+    padding-right: 6px;
+    border-radius: 0;
+    font-weight: normal;
+    color: #6a6a6a;
 }
 /* body .nav ul li i { */
 /*   font-size: 2em; */
 /* } */
 
-@media (min-width: 800 px) {
-    body #content,
-    body #postamble {
-	margin: 0 auto;
-	max-width: 700px !important;
-	width: 700px !important;
+/* Gestion des images */
+body img {
+    border: 1px solid #ccc;
+    height: auto;
+    max-width: 70%;
+}
+@media (max-width: 800px) {
+    body img {
+	max-width: 100%;
     }
 }
-
-body #content {
-  margin-top: 10px;
+body img.no-border {
+    border: none;
 }
 
+/* Si la largeur est au minimum de 800, alors on fiche la largeur de
+   content et postamble à 700 */
+@media (min-width: 800px) {
+  body #content,
+  body #postamble {
+    margin: 0 auto;
+    max-width: 700px !important;
+    width: 700px !important;
+  }
+}
+body #content {
+    margin-top: 10px;
+}
+body #postamble {
+    border-top: 1px solid #e2e2e2;
+    line-height: 1.2em;
+    text-align: center;
+    font-size: 11px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+/* Fin structure */
+
 h1 {
-  font-size: 2.1em;
-  font-weight: bold;
-  margin: 0.4em;
-  line-height: 1.5em;
-  font-weight: 300;
+    font-size: 2.1em;
+    font-weight: bold;
+    margin: 0.4em;
+    line-height: 1.5em;
+    font-weight: 300;
 }
 
 h1 span {
-  font-weight: normal;
-  display: block;
-  font-size: 0.8em;
-  line-height: 1em;
+    font-weight: normal;
+    display: block;
+    font-size: 0.8em;
+    line-height: 1em;
 }
 
 h2 {
-  font-size: 2em;
-  margin: .8em 0 .4em;
-  font-weight: 500;
-  line-height: 2em;
+    font-size: 2em;
+    margin: .8em 0 .4em;
+    font-weight: 500;
+    line-height: 2em;
 }
 
 h3 {
-  font-size: 1.3em;
-  margin: .8em 0 2em 0;
+    font-size: 1.3em;
+    margin: .8em 0 2em 0;
 }
 
 /* Gère tous les liens */
 a {
-  color: #76319F;
-  text-decoration: underline;
-  transition: .2s all ease-in;
+    color: #76319F;
+    text-decoration: underline;
+    transition: .2s all ease-in;
 }
 a:hover {
-  color: #3E0C5C;
+    color: #3E0C5C;
 }
 
 tt, code, kbd {
-  background: #efeadc;
-  border: 1px solid #ccc;
-  padding: 2px 6px 0px;
-  border-radius: 4px;
-  /* color: #ddd; */
+    background: #efeadc;
+    border: 1px solid #ccc;
+    padding: 2px 6px 0px;
+    border-radius: 4px;
+    /* color: #ddd; */
 }
 
 p {
-  margin-bottom: 2em;
+    margin-bottom: 2em;
 }
 
 p.centered {
-  text-align: center;
-  margin: 3em 0;
+    text-align: center;
+    margin: 3em 0;
 }
 
 em {
-  font-weight: 500;
+    font-weight: 500;
 }
 
 
@@ -137,12 +164,4 @@ em {
 /*   /\* font-weight: 400; *\/ */
 /* } */
 
-.footer {
-  border-top: 1px solid #e2e2e2;
-  padding-top: 15px;
-  text-align: center;
-  font-size: 11px;
-  line-height: 1.2em;
-  padding-bottom: 10px;
-}
 
