@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: *
+sitemap: http://alan.burlot.bzh/sitemap.html

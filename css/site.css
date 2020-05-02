@@ -1,5 +1,5 @@
 body {
-    font-family: "fira sans", sans;
+    font-family: "Fira Sans", sans;
     line-height: 1.5em;
     font-size: 18px;
     background: #F5F5ED;
@@ -56,6 +56,15 @@ body .nav ul li a {
 /*   font-size: 2em; */
 /* } */
 
+body a {
+    text-decoration: none;
+    color: #76319F
+}
+
+body a:hover {
+    text-decoration: underline;
+}
+
 /* Gestion des images */
 body img {
     border: 1px solid #ccc;
@@ -92,6 +101,14 @@ body #postamble {
     padding-top: 15px;
     padding-bottom: 10px;
 }
+body #postamble a {
+    color: #76319F;
+    /* text-decoration: underline; */
+    transition: .2s all ease-in;
+}
+body #postamble a:hover {
+    color: #3E0C5C;
+}
 /* Fin structure */
 
 body h1.title {
@@ -123,16 +140,6 @@ h2 {
 h3 {
     font-size: 1.3em;
     margin: .8em 0 2em 0;
-}
-
-/* Gère tous les liens */
-a {
-    color: #76319F;
-    text-decoration: underline;
-    transition: .2s all ease-in;
-}
-a:hover {
-    color: #3E0C5C;
 }
 
 tt, code, kbd {
