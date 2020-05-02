@@ -102,12 +102,12 @@ body #postamble {
     padding-bottom: 10px;
 }
 body #postamble a {
-    color: #76319F;
+    color: #005CC2; /* #76319F;*/
     /* text-decoration: underline; */
     transition: .2s all ease-in;
 }
 body #postamble a:hover {
-    color: #3E0C5C;
+    color: #00295C;/*#3E0C5C;*/
 }
 /* Fin structure */
 
@@ -116,11 +116,12 @@ body h1.title {
 }
 
 h1 {
-    font-size: 2.1em;
+    font-size: 48px;
     font-weight: bold;
-    margin: 0.4em;
+    margin-top: 15px;
+    /* margin-bottom: 10px */
     line-height: 1.5em;
-    font-weight: 300;
+    /* font-weight: 300; */
 }
 
 h1 span {
