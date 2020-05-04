@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2020-05-02 sam. 21:32 -->
+<!-- 2020-05-04 lun. 20:23 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Les notes utiles</title>
+<title>Des mots et des choses.</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Alan Burlot" />
 <style type="text/css">
@@ -195,7 +195,7 @@
 </style>
 <link rel='stylesheet' href='../css/site.css' type='text/css'/>
 <link rel='shortcut icon' href='../images/favicon.ico' type='image/x-icon'>
-<link rel='stylesheet' href='https://code.cdn.mozilla.net/fonts/fira.css'>
+<link href='https://fonts.googleapis.com/css2?family=Alegreya:ital@0;1&display=swap' rel='stylesheet'>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -283,30 +283,54 @@ for the JavaScript code in this tag.
 </div>
 <div id="content">
 
-<div id="outline-container-org0c6b617" class="outline-2">
-<h2 id="org0c6b617">Des trucs d'info</h2>
-<div class="outline-text-2" id="text-org0c6b617">
+<div id="outline-container-org548e59f" class="outline-2">
+<h2 id="org548e59f">La liste des notes</h2>
+<div class="outline-text-2" id="text-org548e59f">
+<ul class="org-ul">
+<li><a href="emacs-stuff.html">Emacs stuff</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6397b93" class="outline-2">
+<h2 id="org6397b93">Des trucs d'info</h2>
+<div class="outline-text-2" id="text-org6397b93">
 <p>
 Emacs, c'est cool.
 </p>
 </div>
+<div id="outline-container-orge9358dd" class="outline-3">
+<h3 id="orge9358dd">Un titre niveau 3</h3>
+<div class="outline-text-3" id="text-orge9358dd">
+<p>
+Un peu de texte
+</p>
 </div>
-
-<div id="outline-container-orgc5329fd" class="outline-2">
-<h2 id="orgc5329fd">Des trucs de méca flu</h2>
-<div class="outline-text-2" id="text-orgc5329fd">
+<div id="outline-container-org4096f65" class="outline-4">
+<h4 id="org4096f65">Un titre niveau 4</h4>
+<div class="outline-text-4" id="text-org4096f65">
+<p>
+et du texte
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgeca9a7b" class="outline-2">
+<h2 id="orgeca9a7b">Des trucs de méca flu</h2>
+<div class="outline-text-2" id="text-orgeca9a7b">
 <p>
 La turbulence, c'est cool.
 </p>
 </div>
 </div>
 
-<div id="outline-container-org74e013e" class="outline-2">
-<h2 id="org74e013e">Test de l'export des maths</h2>
-<div class="outline-text-2" id="text-org74e013e">
+<div id="outline-container-org6ea0483" class="outline-2">
+<h2 id="org6ea0483">Test de l'export des maths</h2>
+<div class="outline-text-2" id="text-org6ea0483">
 <p>
 Quelques formules pour tester :
-\[\lim_{n\rightarrow\infty}\sum_{i=1}^{n}\frac{1}{n^2} = \frac{\pi^2}{6}\]
+\[\lim_{N\rightarrow\infty}\sum_{n=1}^{N}\frac{1}{n^2} = \frac{\pi^2}{6}\]
 </p>
 
 <p>
@@ -314,11 +338,95 @@ Quelques formules pour tester :
 </p>
 </div>
 </div>
+<div id="outline-container-org5ed681f" class="outline-2">
+<h2 id="org5ed681f">Test de l'export des tableaux</h2>
+<div class="outline-text-2" id="text-org5ed681f">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-right" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">\(N\)</th>
+<th scope="col" class="org-right">\(N^2\)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">11</td>
+<td class="org-right">121</td>
+</tr>
+
+<tr>
+<td class="org-right">12</td>
+<td class="org-right">144</td>
+</tr>
+
+<tr>
+<td class="org-right">13</td>
+<td class="org-right">169</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org349838b" class="outline-2">
+<h2 id="org349838b">Test de l'export d'une portion de code</h2>
+<div class="outline-text-2" id="text-org349838b">
+<p>
+Du code bash
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #969896; font-style: italic;"># </span><span style="color: #969896; font-style: italic;">Lancer ediff de emacs automatiquement</span>
+<span style="color: #b5bd68;">function</span> <span style="color: #de935f;">ediff</span><span style="color: #c5c8c6;">()</span> <span style="color: #c5c8c6;">{</span>
+    <span style="color: #f0c674;">fic1</span>=$<span style="color: #8abeb7;">(</span><span style="color: #b294bb;">readlink</span> -f $<span style="color: #f0c674;">1</span><span style="color: #8abeb7;">)</span>
+    <span style="color: #f0c674;">fic2</span>=$<span style="color: #8abeb7;">(</span><span style="color: #b294bb;">readlink</span> -f $<span style="color: #f0c674;">2</span><span style="color: #8abeb7;">)</span>
+    <span style="color: #b5bd68;">if</span> <span style="color: #8abeb7;">[</span> <span style="color: #8abeb7;">"X${2}"</span> = <span style="color: #8abeb7;">"X"</span> <span style="color: #8abeb7;">]</span>; <span style="color: #b5bd68;">then</span>
+        <span style="color: #b294bb;">echo</span> <span style="color: #8abeb7;">"USAGE: ediff &lt;FILE 1&gt; &lt;FILE 2&gt;"</span>
+    <span style="color: #b5bd68;">else</span>
+        <span style="color: #969896; font-style: italic;"># </span><span style="color: #969896; font-style: italic;">The --eval flag takes lisp code and evaluates it with EMACS</span>
+        <span style="color: #969896; font-style: italic;"># </span><span style="color: #969896; font-style: italic;">emacs --eval "(ediff-files \"$1\" \"$2\")"</span>
+        emacsclient -c -a emacs -e <span style="color: #8abeb7;">"(ediff \"$fic1\" \"$fic2\")"</span>
+    <span style="color: #b5bd68;">fi</span>
+<span style="color: #c5c8c6;">}</span>
+</pre>
+</div>
+
+<p>
+Du code lisp
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #969896; font-style: italic;">;; </span><span style="color: #969896; font-style: italic;">= R&#233;pertoire des sauvegardes</span>
+<span style="color: #c5c8c6;">(</span><span style="color: #b5bd68;">setq</span> backup-by-copying t<span style="color: #c5c8c6;">)</span>
+<span style="color: #c5c8c6;">(</span><span style="color: #b5bd68;">setq</span> backup-directory-alist '<span style="color: #8abeb7;">(</span><span style="color: #f0c674;">(</span><span style="color: #8abeb7;">"."</span> . <span style="color: #8abeb7;">"~/.saves"</span><span style="color: #f0c674;">)</span><span style="color: #8abeb7;">)</span>
+      delete-old-versions t
+      kept-new-versions 6
+      kept-old-versions 2
+      version-control t<span style="color: #c5c8c6;">)</span>
+</pre>
+</div>
+
+<p>
+Du code C
+</p>
+<div class="org-src-container">
+<pre class="src src-python"><span style="color: #b5bd68;">from</span> bs4 <span style="color: #b5bd68;">import</span> BeautifulSoup <span style="color: #b5bd68;">as</span> BS
+<span style="color: #b5bd68;">with</span> <span style="color: #b294bb;">open</span><span style="color: #c5c8c6;">(</span><span style="color: #8abeb7;">"/tmp/foo.html"</span><span style="color: #c5c8c6;">)</span> <span style="color: #b5bd68;">as</span> f:
+<span style="color: #969896; background-color: #22a224a427a7;"> </span>   <span style="color: #f0c674;">s</span> = BS<span style="color: #c5c8c6;">(</span>f<span style="color: #c5c8c6;">)</span>
+</pre>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <div class='footer'>
 Copyleft &#127279; 2020 (<a href="http://validator.w3.org/check?uri=referer">Validate</a> HTML).<br/>
-Last updated 2020-05-01 ven. 21:10. <br/>
+Last updated 2020-05-04 lun. 20:12. <br/>
 Built with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 26.1 (<a href="https://orgmode.org">Org</a> mode 9.3.6).
 </div>
 </div>
