@@ -1,7 +1,5 @@
 body {
-    /* font-family: Georgia, serif; */
     font-family: "Fira Sans", sans;
-    /* line-height: 1.5em; */
     font-size: 18px;
     background: #F5F5ED;
     margin: 0;
@@ -10,7 +8,7 @@ body {
 @media (max-width: 799px) {
     body {
 	padding: 15px;
-	font-size: 0.95em;
+	/* font-size: 0.95em; */
     }
 }
 
@@ -34,7 +32,7 @@ body .nav {
     text-align: center;
     margin-top: 15px;
     border-bottom: 1px solid #e2e2e2;
-    font-size: 12px;
+    /* font-size: 12px; */
     text-transform: uppercase;
 }
 body .nav ul {
@@ -59,11 +57,12 @@ body .nav ul li a {
 
 body a {
     text-decoration: none;
-    color: #005CC2;
+    color: #C25200;
+    transition: .2s all ease-in;
 }
-
 body a:hover {
-    text-decoration: underline;
+    color: #C2000F;/*#3E0C5C;*/
+    text-decoration: italic;
 }
 
 /* Gestion des images */
@@ -98,17 +97,17 @@ body #postamble {
     border-top: 1px solid #e2e2e2;
     line-height: 1.4em;
     text-align: center;
-    font-size: 11px;
+    font-size: xx-smaller;
     padding-top: 10px;
     padding-bottom: 10px;
 }
 body #postamble a {
-    color: #005CC2; /* #76319F;*/
+    color: #C25200; /* #76319F;*/
     /* text-decoration: underline; */
     transition: .2s all ease-in;
 }
 body #postamble a:hover {
-    color: #00295C;/*#3E0C5C;*/
+    color: #C2000F;/*#3E0C5C;*/
 }
 /* Fin structure */
 
@@ -117,7 +116,7 @@ body h1.title {
 }
 
 h1 {
-    font-size: 48px;
+    font-size: xx-large;
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -176,6 +175,8 @@ em {
 /* Pour les blocks de code */
 pre.src {
     font-size: smaller;
+    background-color: #FFFFFF;
+    overflow: auto;
 }
 
 /* body .nav { */
