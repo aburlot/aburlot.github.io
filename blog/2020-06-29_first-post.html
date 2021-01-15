@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-01-07 jeu. 09:08 -->
+<!-- 2021-01-15 ven. 19:43 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Premier post</title>
@@ -52,7 +52,7 @@
     padding: 3px;
     border: 1px solid black;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
@@ -193,7 +193,7 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<link rel='stylesheet' href='../css/site.css' type='text/css'/>
+<link rel='stylesheet' href='../css/site.css'/>
 <link rel='shortcut icon' href='../images/favicon.png' type='image/x-icon'/>
 <link rel='stylesheet' href='https://code.cdn.mozilla.net/fonts/fira.css'/>
 <script type="text/javascript">
@@ -228,16 +228,26 @@
 <ul>
 <li><a href='/'>Home</a></li>
 <li><a href='/blog/'>Blog</a></li>
-<li><a href='/notes/'>Notes</a></li>
+<li><div class='dropdown'>
+    <button href='/notes/' class='dropbtn'><span class='sc'>Notes</span>
+      <i class='fa fa-caret-down'></i>
+    </button>
+    <div class='dropdown-content'>
+      <a href='/notes/informatique'>Info. & prog.</a><br/>
+      <a href='/notes/musique'>Musique</a><br/>
+      <a href='/notes/glossaire'>Glossaire</a><br/>
+      <a href='/notes/rando'>Rando</a>
+    </div>
+</div></li>
 <li><a href='/contact'>Contact</a></li>
 </ul>
 </div>
 </div>
 <div id="content">
 
-<div id="outline-container-org30cf3b3" class="outline-2">
-<h2 id="org30cf3b3">De quoi va-t-on parler</h2>
-<div class="outline-text-2" id="text-org30cf3b3">
+<div id="outline-container-org75b285e" class="outline-2">
+<h2 id="org75b285e">De quoi va-t-on parler</h2>
+<div class="outline-text-2" id="text-org75b285e">
 <p>
 lalala
 </p>
@@ -248,7 +258,7 @@ lalala
 <div class='footer'>
 Copyleft 2020 (<a href="https://validator.w3.org/check?uri=referer">Validate</a> HTML).<br/>
 Last updated 2021-01-07 jeu. 09:08. <br/>
-Built with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 26.1 (<a href="https://orgmode.org">Org</a> mode 9.4.2).
+Built with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 26.1 (<a href="https://orgmode.org">Org</a> mode).
 </div>
 </div>
 </body>
