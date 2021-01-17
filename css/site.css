@@ -2,7 +2,8 @@ body {
     font-family: "Fira Sans", sans;
     /* font-family: "Alegreya", sans; */
     font-size: 18px;
-    background: #F5F5ED;
+    /* background: #F5F5ED; */
+    background: #F4ECD8
     margin: 0;
 }
 
@@ -128,6 +129,11 @@ h1 {
     margin-bottom: 0px;
     /* line-height: 1.5em; */
     /* font-weight: 300; */
+}
+
+h1 a {
+    text-decoration:none !important;
+    color: black;
 }
 
 /* h1 span { */
@@ -271,3 +277,9 @@ table {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+.lienspotify {
+    /* display: -webkit-flex; */
+    display: flex;
+    /* align-items: center; */
+}
