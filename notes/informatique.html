@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
 <head>
-<!-- 2021-01-18 lun. 10:40 -->
+<!-- 2021-01-18 lun. 13:39 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Des trucs à propos d'emacs</title>
+<title>Des notes informatiques</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Alan Burlot" />
 <style type="text/css">
@@ -247,42 +247,43 @@
 <h2>Table des matières</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgd84bf39">bash</a>
+<li><a href="#org6423c62">bash</a>
 <ul>
-<li><a href="#org85c7fe1">grep, sed et cie</a>
+<li><a href="#orge732312">grep, sed et cie</a>
 <ul>
-<li><a href="#org81a6f5a">Isoler du texte entre deux mots</a></li>
-<li><a href="#org67aedac">Plusieurs motifs en une commande</a></li>
-<li><a href="#org5d44c1f">Colorer la sortie dans le terminal</a></li>
-<li><a href="#org228f0f8">Inverser le sens de less</a></li>
-<li><a href="#orgb78eae6">Compter le nombre de fichiers dans un dossier</a></li>
-<li><a href="#org99be85e">Arrêter un script si la commande précédente a donné une erreur</a></li>
-<li><a href="#org7db39dd">Convertir un pdf en jpg</a></li>
-<li><a href="#orgf2b7499">Compresser en parallèle avec pbzip2</a></li>
+<li><a href="#orga9c2f17">Isoler du texte entre deux mots</a></li>
+<li><a href="#orgcf0c631">Plusieurs motifs en une commande</a></li>
+<li><a href="#org6d93650">Colorer la sortie dans le terminal</a></li>
+<li><a href="#orgf6db172">Inverser le sens de less</a></li>
+<li><a href="#org3fd5afd">Compter le nombre de fichiers dans un dossier</a></li>
+<li><a href="#org0ea243f">Arrêter un script si la commande précédente a donné une erreur</a></li>
+<li><a href="#org3a37049">Convertir un pdf en jpg</a></li>
+<li><a href="#org8c2171e">Compresser en parallèle avec pbzip2</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgf73f542">org-mode</a>
+<li><a href="#org32ff479">org-mode</a>
 <ul>
-<li><a href="#orgb84a218">Exporter un tableau org en html</a></li>
+<li><a href="#org7bc7f60">Gérer les liens internes dans l'export html</a></li>
+<li><a href="#org9ca9a08">Exporter un tableau org en html</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgd84bf39" class="outline-2">
-<h2 id="orgd84bf39">bash</h2>
-<div class="outline-text-2" id="text-orgd84bf39">
+<div id="outline-container-org6423c62" class="outline-2">
+<h2 id="org6423c62">bash</h2>
+<div class="outline-text-2" id="text-org6423c62">
 </div>
-<div id="outline-container-org85c7fe1" class="outline-3">
-<h3 id="org85c7fe1">grep, sed et cie</h3>
-<div class="outline-text-3" id="text-org85c7fe1">
+<div id="outline-container-orge732312" class="outline-3">
+<h3 id="orge732312">grep, sed et cie</h3>
+<div class="outline-text-3" id="text-orge732312">
 </div>
-<div id="outline-container-org81a6f5a" class="outline-4">
-<h4 id="org81a6f5a">Isoler du texte entre deux mots</h4>
-<div class="outline-text-4" id="text-org81a6f5a">
+<div id="outline-container-orga9c2f17" class="outline-4">
+<h4 id="orga9c2f17">Isoler du texte entre deux mots</h4>
+<div class="outline-text-4" id="text-orga9c2f17">
 <div class="org-src-container">
 <pre class="src src-sh">cat tmp | grep -o -P <span style="color: #8abeb7;">'(?&lt;=foo).*(?=bar)'</span>
 </pre>
@@ -293,9 +294,9 @@ tmp.
 </p>
 </div>
 </div>
-<div id="outline-container-org67aedac" class="outline-4">
-<h4 id="org67aedac">Plusieurs motifs en une commande</h4>
-<div class="outline-text-4" id="text-org67aedac">
+<div id="outline-container-orgcf0c631" class="outline-4">
+<h4 id="orgcf0c631">Plusieurs motifs en une commande</h4>
+<div class="outline-text-4" id="text-orgcf0c631">
 <div class="org-src-container">
 <pre class="src src-sh">grep <span style="color: #8abeb7;">'word1\|word2\|word3'</span> file
 </pre>
@@ -309,13 +310,13 @@ ou avec <i>egrep</i> &lt;=&gt; <i>grep -e</i> pour ne pas avoir les antislashs :
 </div>
 </div>
 </div>
-<div id="outline-container-org5d44c1f" class="outline-4">
-<h4 id="org5d44c1f">Colorer la sortie dans le terminal</h4>
-<div class="outline-text-4" id="text-org5d44c1f">
+<div id="outline-container-org6d93650" class="outline-4">
+<h4 id="org6d93650">Colorer la sortie dans le terminal</h4>
+<div class="outline-text-4" id="text-org6d93650">
 </div>
 <ul class="org-ul">
-<li><a id="org51e25a4"></a>less<br />
-<div class="outline-text-5" id="text-org51e25a4">
+<li><a id="orgaf0ce31"></a>less<br />
+<div class="outline-text-5" id="text-orgaf0ce31">
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #b5bd68;">function</span> <span style="color: #de935f;">cless</span><span style="color: #c5c8c6;">()</span> <span style="color: #c5c8c6;">{</span> pygmentize -O <span style="color: #f0c674;">encoding</span>=latin1,<span style="color: #f0c674;">style</span>=emacs -g <span style="color: #8abeb7;">"$@"</span> | less -R; <span style="color: #c5c8c6;">}</span>
 </pre>
@@ -330,8 +331,8 @@ interprêter les codes couleurs.
 </p>
 </div>
 </li>
-<li><a id="orgbfa6e70"></a>cat<br />
-<div class="outline-text-5" id="text-orgbfa6e70">
+<li><a id="org0ba7b28"></a>cat<br />
+<div class="outline-text-5" id="text-org0ba7b28">
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #b294bb;">alias</span> <span style="color: #f0c674;">ccat</span>=<span style="color: #8abeb7;">'pygmentize -g -O style=colorful,linenos=1,encoding=latin1'</span>
 </pre>
@@ -344,9 +345,9 @@ Identique à la commande précédente.
 </ul>
 </div>
 
-<div id="outline-container-org228f0f8" class="outline-4">
-<h4 id="org228f0f8">Inverser le sens de less</h4>
-<div class="outline-text-4" id="text-org228f0f8">
+<div id="outline-container-orgf6db172" class="outline-4">
+<h4 id="orgf6db172">Inverser le sens de less</h4>
+<div class="outline-text-4" id="text-orgf6db172">
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #b5bd68;">function</span> <span style="color: #de935f;">iless</span><span style="color: #c5c8c6;">()</span> <span style="color: #c5c8c6;">{</span> tac <span style="color: #8abeb7;">"$@"</span> | less; <span style="color: #c5c8c6;">}</span>
 </pre>
@@ -358,9 +359,9 @@ faire défiler.
 </div>
 </div>
 
-<div id="outline-container-orgb78eae6" class="outline-4">
-<h4 id="orgb78eae6">Compter le nombre de fichiers dans un dossier</h4>
-<div class="outline-text-4" id="text-orgb78eae6">
+<div id="outline-container-org3fd5afd" class="outline-4">
+<h4 id="org3fd5afd">Compter le nombre de fichiers dans un dossier</h4>
+<div class="outline-text-4" id="text-org3fd5afd">
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #b294bb;">alias</span> <span style="color: #f0c674;">countfiles</span>=<span style="color: #8abeb7;">"find . -type f -print0 | tr -d -c '\0' | wc -c"</span>
 </pre>
@@ -370,9 +371,9 @@ Trouver sur stackexchange. Possibilité de faire <i>find . -type f | wc -l</i> �
 </p>
 </div>
 </div>
-<div id="outline-container-org99be85e" class="outline-4">
-<h4 id="org99be85e">Arrêter un script si la commande précédente a donné une erreur</h4>
-<div class="outline-text-4" id="text-org99be85e">
+<div id="outline-container-org0ea243f" class="outline-4">
+<h4 id="org0ea243f">Arrêter un script si la commande précédente a donné une erreur</h4>
+<div class="outline-text-4" id="text-org0ea243f">
 <p>
 On récupère le code de sortie d'exécution de la commande précédente. Si elle est différente de 1, on
 quitte.
@@ -393,9 +394,9 @@ en début de script.
 </p>
 </div>
 </div>
-<div id="outline-container-org7db39dd" class="outline-4">
-<h4 id="org7db39dd">Convertir un pdf en jpg</h4>
-<div class="outline-text-4" id="text-org7db39dd">
+<div id="outline-container-org3a37049" class="outline-4">
+<h4 id="org3a37049">Convertir un pdf en jpg</h4>
+<div class="outline-text-4" id="text-org3a37049">
 <p>
 Avec imagemagic :
 </p>
@@ -405,9 +406,9 @@ Avec imagemagic :
 </div>
 </div>
 </div>
-<div id="outline-container-orgf2b7499" class="outline-4">
-<h4 id="orgf2b7499">Compresser en parallèle avec pbzip2</h4>
-<div class="outline-text-4" id="text-orgf2b7499">
+<div id="outline-container-org8c2171e" class="outline-4">
+<h4 id="org8c2171e">Compresser en parallèle avec pbzip2</h4>
+<div class="outline-text-4" id="text-org8c2171e">
 <p>
 À compiler soi-même si besoin. Exemple de commande qui fonctionne :
 </p>
@@ -423,13 +424,24 @@ Utilise automatiquement tous les CPU disponibles.
 </div>
 </div>
 
-<div id="outline-container-orgf73f542" class="outline-2">
-<h2 id="orgf73f542">org-mode</h2>
-<div class="outline-text-2" id="text-orgf73f542">
+<div id="outline-container-org32ff479" class="outline-2">
+<h2 id="org32ff479">org-mode</h2>
+<div class="outline-text-2" id="text-org32ff479">
 </div>
-<div id="outline-container-orgb84a218" class="outline-3">
-<h3 id="orgb84a218">Exporter un tableau org en html</h3>
-<div class="outline-text-3" id="text-orgb84a218">
+<div id="outline-container-org7bc7f60" class="outline-3">
+<h3 id="org7bc7f60">Gérer les liens internes dans l'export html</h3>
+<div class="outline-text-3" id="text-org7bc7f60">
+<p>
+Pour les besoins de ce site, je souhaitais faire un lien vers un
+fichier de note dans un post de blog. Pour que le lien soit
+correctement géré, il fait ajouter la variable locale
+<i>org-link-file-path-type</i> avec la valeur <i>relative</i>.
+</p>
+</div>
+</div>
+<div id="outline-container-org9ca9a08" class="outline-3">
+<h3 id="org9ca9a08">Exporter un tableau org en html</h3>
+<div class="outline-text-3" id="text-org9ca9a08">
 <p>
 On part du tableau suivant :
 </p>
@@ -481,7 +493,7 @@ qui donne :
 <div id="postamble" class="status">
 <div class='footer'>
 <a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'><img alt='Licence Creative Commons' style='border-width:0' src='https://i.creativecommons.org/l/by-sa/4.0/80x15.png' /></a><br/>
-Last updated 2021-01-18 lun. 08:53. <br/>
+Last updated 2021-01-18 lun. 13:34. <br/>
 Built with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 26.1 (<a href="https://orgmode.org">Org</a> mode).
 </div>
 </div>
