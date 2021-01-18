@@ -181,6 +181,11 @@ p + ul {
     margin-bottom: 1.5em;
 }
 
+p + div.org-src-container {
+    margin-top: -1.5em;
+    margin-bottom: 1.5em;
+}
+
 p + table {
     margin-top: -1.5em;
     margin-bottom: 1.5em;
@@ -278,8 +283,12 @@ table {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
 
+/* https://stackoverflow.com/questions/2939914/how-do-i-vertically-align-text-in-a-div */
+.imgspotify {
+    vertical-align: middle;
+}
+
 .lienspotify {
-    /* display: -webkit-flex; */
-    display: flex;
-    /* align-items: center; */
+    padding-top: 2px;
+    padding-bottom: 1px;
 }
