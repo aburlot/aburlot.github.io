@@ -3,7 +3,7 @@ body {
     /* font-family: "Alegreya", sans; */
     font-size: 18px;
     /* background: #F5F5ED; */
-    background: #F4ECD8
+    background: #F4ECD8;
     margin: 0;
 }
 
@@ -64,11 +64,13 @@ body .nav ul li a {
 
 body a {
     text-decoration: none;
-    color: #C25200;
+    /* color: #C25200; */
+    color: #00445C;
     transition: .2s all ease-in;
 }
 body a:hover {
-    color: #C2000F;/*#3E0C5C;*/
+    /* color: #C2000F;/\*#3E0C5C;*\/ */
+    color: #05005C;
     text-decoration: italic;
 }
 
@@ -108,14 +110,15 @@ body #postamble {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-body #postamble a {
-    color: #C25200; /* #76319F;*/
-    /* text-decoration: underline; */
-    transition: .2s all ease-in;
-}
-body #postamble a:hover {
-    color: #C2000F;/*#3E0C5C;*/
-}
+
+/* body #postamble a { */
+/*     color: #C25200; /\* #76319F;*\/ */
+/*     /\* text-decoration: underline; *\/ */
+/*     transition: .2s all ease-in; */
+/* } */
+/* body #postamble a:hover { */
+/*     color: #C2000F;/\*#3E0C5C;*\/ */
+/* } */
 /* Fin structure */
 
 body h1.title {
