@@ -1,7 +1,7 @@
 {
     "name": "Alan's page",
     "short_name": "Alan's page",
-    "theme_color": "#00445c",
+    "theme_color": "#f4ecd8",
     "description": "Site web perso d'Alan Burlot",
     "background_color": "#f4ecd8",
     "display": "standalone",
