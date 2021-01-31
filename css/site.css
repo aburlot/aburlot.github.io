@@ -166,13 +166,14 @@ h4 {
     margin-bottom: 0.4em;
 }
 
-tt, code, kbd {
-    background: #efeadc;
-    border: 1px solid #ccc;
-    padding: 2px 6px 0px;
-    border-radius: 4px;
-    /* color: #ddd; */
-}
+/* Suppr car prism.js */
+/* tt, code, kbd { */
+/*     background: #efeadc; */
+/*     border: 1px solid #ccc; */
+/*     padding: 2px 6px 0px; */
+/*     border-radius: 4px; */
+/*     /\* color: #ddd; *\/ */
+/* } */
 
 p {
     margin-bottom: 2em;
@@ -204,11 +205,11 @@ em {
 }
 
 /* Pour les blocks de code */
-pre.src {
-    font-size: small;
-    background-color: #FFFFFF;
-    overflow: auto;
-}
+/* pre.src { */
+/*     font-size: small; */
+/*     background-color: #FFFFFF; */
+/*     overflow: auto; */
+/* } */
 
 /* Les tableaux */
 table {

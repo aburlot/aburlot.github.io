@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- 2021-01-28 jeu. 07:11 -->
+<!-- 2021-01-31 dim. 08:48 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Des notes informatiques</title>
@@ -191,14 +191,33 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<link rel='canonical' href='https://alan.burlot.bzh/'/>
+<link rel='canonical' href='https://alan.burlot.bzh' />
 <meta name='author' content='Alan Burlot' />
 <meta name='description' content='Site web personnel, n'engage que moi.' />
 <meta name='keywords' content='alan,burlot,informatique,emacs,org-mode,musique,lectures' />
+<!--<meta http-equiv='Cache-control' content='private' />-->
 <script src='/js/prism.js'></script>
 <link rel='stylesheet' href='/css/site.css' />
 <link rel='stylesheet' href='/css/prism.css' />
 <link rel='stylesheet' href='/css/fonts/firasans/fira.css' />
+<link rel='apple-touch-icon' sizes='57x57' href='/images/favicon/apple-icon-57x57.png'>
+<link rel='apple-touch-icon' sizes='60x60' href='/images/favicon/apple-icon-60x60.png'>
+<link rel='apple-touch-icon' sizes='72x72' href='/images/favicon/apple-icon-72x72.png'>
+<link rel='apple-touch-icon' sizes='76x76' href='/images/favicon/apple-icon-76x76.png'>
+<link rel='apple-touch-icon' sizes='114x114' href='/images/favicon/apple-icon-114x114.png'>
+<link rel='apple-touch-icon' sizes='120x120' href='/images/favicon/apple-icon-120x120.png'>
+<link rel='apple-touch-icon' sizes='144x144' href='/images/favicon/apple-icon-144x144.png'>
+<link rel='apple-touch-icon' sizes='152x152' href='/images/favicon/apple-icon-152x152.png'>
+<link rel='apple-touch-icon' sizes='180x180' href='/images/favicon/apple-icon-180x180.png'>
+<link rel='icon' type='image/png' sizes='192x192'  href='/images/favicon/android-icon-192x192.png'>
+<link rel='icon' type='image/png' sizes='32x32' href='/images/favicon/favicon-32x32.png'>
+<link rel='icon' type='image/png' sizes='96x96' href='/images/favicon/favicon-96x96.png'>
+<link rel='icon' type='image/png' sizes='16x16' href='/images/favicon/favicon-16x16.png'>
+<link rel='manifest' href='/manifest.json'>
+<meta name='msapplication-TileColor' content='#ffffff'>
+<meta name='msapplication-TileImage' content='/ms-icon-144x144.png'>
+<meta name='theme-color' content='#ffffff'>
+
 <link rel='shortcut icon' href='/images/favicon.png' type='image/x-icon' />
 <script type="text/javascript">
 // @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
@@ -248,57 +267,60 @@
 </div>
 </div>
 <div id="content">
+<h1 class="title">Des notes informatiques</h1>
 <div id="table-of-contents">
 <h2>Table des matières</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org424fda6">bash</a>
+<li><a href="#orge8d0b89">bash</a>
 <ul>
-<li><a href="#orgb90af88">grep, sed et cie</a>
+<li><a href="#orgb9d84b8">grep, sed et cie</a>
 <ul>
-<li><a href="#orge15a946">Isoler du texte entre deux mots</a></li>
-<li><a href="#org92612c5">Plusieurs motifs en une commande</a></li>
-<li><a href="#orgc7e0c8b">Colorer la sortie dans le terminal</a></li>
-<li><a href="#org325b396">Inverser le sens de less</a></li>
-<li><a href="#org47b22a5">Compter le nombre de fichiers dans un dossier</a></li>
-<li><a href="#orgb58f687">Arrêter un script si la commande précédente a donné une erreur</a></li>
-<li><a href="#org7209783">Convertir un pdf en jpg</a></li>
-<li><a href="#org2594390">Compresser en parallèle avec pbzip2</a></li>
+<li><a href="#orgc462f79">Isoler du texte entre deux mots</a></li>
+<li><a href="#orgd4eec6b">Plusieurs motifs en une commande</a></li>
+<li><a href="#org570b6a5">Colorer la sortie dans le terminal</a></li>
+<li><a href="#orge5efa9a">Inverser le sens de less</a></li>
+<li><a href="#orgbbd7f60">Compter le nombre de fichiers dans un dossier</a></li>
+<li><a href="#orgaa864f3">Arrêter un script si la commande précédente a donné une erreur</a></li>
+<li><a href="#org826c18a">Convertir un pdf en jpg</a></li>
+<li><a href="#orgd104392">Compresser en parallèle avec pbzip2</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgc6c6267">org-mode</a>
+<li><a href="#org3ddc907">org-mode</a>
 <ul>
-<li><a href="#org77048d4">Gérer les liens internes dans l'export html</a></li>
-<li><a href="#org1583a4d">Exporter un tableau org en html</a></li>
+<li><a href="#org54a17d0">Gérer les liens internes dans l'export html</a></li>
+<li><a href="#org5bbd3d6">Exporter un tableau org en html</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org424fda6" class="outline-2">
-<h2 id="org424fda6">bash</h2>
-<div class="outline-text-2" id="text-org424fda6">
+<div id="outline-container-orge8d0b89" class="outline-2">
+<h2 id="orge8d0b89">bash</h2>
+<div class="outline-text-2" id="text-orge8d0b89">
 </div>
-<div id="outline-container-orgb90af88" class="outline-3">
-<h3 id="orgb90af88">grep, sed et cie</h3>
-<div class="outline-text-3" id="text-orgb90af88">
+<div id="outline-container-orgb9d84b8" class="outline-3">
+<h3 id="orgb9d84b8">grep, sed et cie</h3>
+<div class="outline-text-3" id="text-orgb9d84b8">
 </div>
-<div id="outline-container-orge15a946" class="outline-4">
-<h4 id="orge15a946">Isoler du texte entre deux mots</h4>
-<div class="outline-text-4" id="text-orge15a946">
-<pre><code class="language-bash"> cat tmp | grep -o -P '(?<=foo).*(?=bar)'</code></pre>
+<div id="outline-container-orgc462f79" class="outline-4">
+<h4 id="orgc462f79">Isoler du texte entre deux mots</h4>
+<div class="outline-text-4" id="text-orgc462f79">
+<pre><code class="language-bash">
+cat tmp | grep -o -P '(?<=foo).*(?=bar)'
+</code></pre>
 <p>
 Permet d'isoler les caractères présents entre les mots foo et bar dans
 tmp.
 </p>
 </div>
 </div>
-<div id="outline-container-org92612c5" class="outline-4">
-<h4 id="org92612c5">Plusieurs motifs en une commande</h4>
-<div class="outline-text-4" id="text-org92612c5">
+<div id="outline-container-orgd4eec6b" class="outline-4">
+<h4 id="orgd4eec6b">Plusieurs motifs en une commande</h4>
+<div class="outline-text-4" id="text-orgd4eec6b">
 <div class="org-src-container">
 <pre class="src src-sh">grep <span style="color: #8abeb7;">'word1\|word2\|word3'</span> file
 </pre>
@@ -312,13 +334,13 @@ ou avec <i>egrep</i> &lt;=&gt; <i>grep -e</i> pour ne pas avoir les antislashs :
 </div>
 </div>
 </div>
-<div id="outline-container-orgc7e0c8b" class="outline-4">
-<h4 id="orgc7e0c8b">Colorer la sortie dans le terminal</h4>
-<div class="outline-text-4" id="text-orgc7e0c8b">
+<div id="outline-container-org570b6a5" class="outline-4">
+<h4 id="org570b6a5">Colorer la sortie dans le terminal</h4>
+<div class="outline-text-4" id="text-org570b6a5">
 </div>
 <ul class="org-ul">
-<li><a id="orgea5c339"></a>less<br>
-<div class="outline-text-5" id="text-orgea5c339">
+<li><a id="org78ab470"></a>less<br>
+<div class="outline-text-5" id="text-org78ab470">
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #b5bd68;">function</span> <span style="color: #de935f;">cless</span><span style="color: #c5c8c6;">()</span> <span style="color: #c5c8c6;">{</span> pygmentize -O <span style="color: #f0c674;">encoding</span>=latin1,<span style="color: #f0c674;">style</span>=emacs -g <span style="color: #8abeb7;">"$@"</span> | less -R; <span style="color: #c5c8c6;">}</span>
 </pre>
@@ -333,8 +355,8 @@ interprêter les codes couleurs.
 </p>
 </div>
 </li>
-<li><a id="orge26bd76"></a>cat<br>
-<div class="outline-text-5" id="text-orge26bd76">
+<li><a id="orga06c987"></a>cat<br>
+<div class="outline-text-5" id="text-orga06c987">
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #b294bb;">alias</span> <span style="color: #f0c674;">ccat</span>=<span style="color: #8abeb7;">'pygmentize -g -O style=colorful,linenos=1,encoding=latin1'</span>
 </pre>
@@ -347,9 +369,9 @@ Identique à la commande précédente.
 </ul>
 </div>
 
-<div id="outline-container-org325b396" class="outline-4">
-<h4 id="org325b396">Inverser le sens de less</h4>
-<div class="outline-text-4" id="text-org325b396">
+<div id="outline-container-orge5efa9a" class="outline-4">
+<h4 id="orge5efa9a">Inverser le sens de less</h4>
+<div class="outline-text-4" id="text-orge5efa9a">
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #b5bd68;">function</span> <span style="color: #de935f;">iless</span><span style="color: #c5c8c6;">()</span> <span style="color: #c5c8c6;">{</span> tac <span style="color: #8abeb7;">"$@"</span> | less; <span style="color: #c5c8c6;">}</span>
 </pre>
@@ -361,9 +383,9 @@ faire défiler.
 </div>
 </div>
 
-<div id="outline-container-org47b22a5" class="outline-4">
-<h4 id="org47b22a5">Compter le nombre de fichiers dans un dossier</h4>
-<div class="outline-text-4" id="text-org47b22a5">
+<div id="outline-container-orgbbd7f60" class="outline-4">
+<h4 id="orgbbd7f60">Compter le nombre de fichiers dans un dossier</h4>
+<div class="outline-text-4" id="text-orgbbd7f60">
 <div class="org-src-container">
 <pre class="src src-sh"><span style="color: #b294bb;">alias</span> <span style="color: #f0c674;">countfiles</span>=<span style="color: #8abeb7;">"find . -type f -print0 | tr -d -c '\0' | wc -c"</span>
 </pre>
@@ -373,9 +395,9 @@ Trouver sur stackexchange. Possibilité de faire <i>find . -type f | wc -l</i> �
 </p>
 </div>
 </div>
-<div id="outline-container-orgb58f687" class="outline-4">
-<h4 id="orgb58f687">Arrêter un script si la commande précédente a donné une erreur</h4>
-<div class="outline-text-4" id="text-orgb58f687">
+<div id="outline-container-orgaa864f3" class="outline-4">
+<h4 id="orgaa864f3">Arrêter un script si la commande précédente a donné une erreur</h4>
+<div class="outline-text-4" id="text-orgaa864f3">
 <p>
 On récupère le code de sortie d'exécution de la commande précédente. Si elle est différente de 1, on
 quitte.
@@ -396,9 +418,9 @@ en début de script.
 </p>
 </div>
 </div>
-<div id="outline-container-org7209783" class="outline-4">
-<h4 id="org7209783">Convertir un pdf en jpg</h4>
-<div class="outline-text-4" id="text-org7209783">
+<div id="outline-container-org826c18a" class="outline-4">
+<h4 id="org826c18a">Convertir un pdf en jpg</h4>
+<div class="outline-text-4" id="text-org826c18a">
 <p>
 Avec imagemagic :
 </p>
@@ -408,9 +430,9 @@ Avec imagemagic :
 </div>
 </div>
 </div>
-<div id="outline-container-org2594390" class="outline-4">
-<h4 id="org2594390">Compresser en parallèle avec pbzip2</h4>
-<div class="outline-text-4" id="text-org2594390">
+<div id="outline-container-orgd104392" class="outline-4">
+<h4 id="orgd104392">Compresser en parallèle avec pbzip2</h4>
+<div class="outline-text-4" id="text-orgd104392">
 <p>
 À compiler soi-même si besoin. Exemple de commande qui fonctionne :
 </p>
@@ -426,13 +448,13 @@ Utilise automatiquement tous les CPU disponibles.
 </div>
 </div>
 
-<div id="outline-container-orgc6c6267" class="outline-2">
-<h2 id="orgc6c6267">org-mode</h2>
-<div class="outline-text-2" id="text-orgc6c6267">
+<div id="outline-container-org3ddc907" class="outline-2">
+<h2 id="org3ddc907">org-mode</h2>
+<div class="outline-text-2" id="text-org3ddc907">
 </div>
-<div id="outline-container-org77048d4" class="outline-3">
-<h3 id="org77048d4">Gérer les liens internes dans l'export html</h3>
-<div class="outline-text-3" id="text-org77048d4">
+<div id="outline-container-org54a17d0" class="outline-3">
+<h3 id="org54a17d0">Gérer les liens internes dans l'export html</h3>
+<div class="outline-text-3" id="text-org54a17d0">
 <p>
 Pour les besoins de ce site, je souhaitais faire un lien vers un
 fichier de note dans un post de blog. Pour que le lien soit
@@ -441,9 +463,9 @@ correctement géré, il fait ajouter la variable locale
 </p>
 </div>
 </div>
-<div id="outline-container-org1583a4d" class="outline-3">
-<h3 id="org1583a4d">Exporter un tableau org en html</h3>
-<div class="outline-text-3" id="text-org1583a4d">
+<div id="outline-container-org5bbd3d6" class="outline-3">
+<h3 id="org5bbd3d6">Exporter un tableau org en html</h3>
+<div class="outline-text-3" id="text-org5bbd3d6">
 <p>
 On part du tableau suivant :
 </p>
@@ -495,9 +517,10 @@ qui donne :
 <div id="postamble" class="status">
 <div class='footer'>
 <a rel='license' href='http://creativecommons.org/licenses/by-sa/4.0/'><img alt='Licence Creative Commons' style='border-width:0' src='/images/ccby_80x15.png' width=80px height=15px /></a><br/>
-Last updated 2021-01-28 jeu. 07:10. <br/>
+Last updated 2021-01-28 jeu. 18:56. <br/>
 Built with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 26.1 (<a href="https://orgmode.org">Org</a> mode).
 </div>
+<script src='/js/main.js'></script>
 </div>
 </body>
 </html>
