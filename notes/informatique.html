@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- 2021-01-31 dim. 09:22 -->
+<!-- 2021-02-13 sam. 18:43 -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Des notes informatiques</title>
@@ -195,7 +195,6 @@
 <meta name='author' content='Alan Burlot' />
 <meta name='description' content='Site web personnel, n'engage que moi.' />
 <meta name='keywords' content='alan,burlot,informatique,emacs,org-mode,musique,lectures' />
-<!--<meta http-equiv='Cache-control' content='private' />-->
 <script src='/js/prism.js'></script>
 <link rel='stylesheet' href='/css/site.css' />
 <link rel='stylesheet' href='/css/prism.css' />
@@ -251,18 +250,8 @@
 <ul>
 <li><a href='/'>Home</a></li>
 <li><a href='/blog/'>Blog</a></li>
-<li><div class='dropdown'>
-    <a href='/notes/' class='dropbtn'><span class='sc'>Notes</span> <i class='fa fa-caret-down'></i>
-    </a>
-    <div class='dropdown-content'>
-      <a href='/notes/informatique'>Informatique</a><br/>
-      <a href='/notes/musique'>Musique</a><br/>
-      <a href='/notes/glossaire'>Glossaire</a><br/>
-      <a href='/notes/rando'>Rando</a><br/>
-      <a href='/notes/lecture'>Lecture</a>
-    </div>
-</div></li>
-<li><a href='/contact'>Contact</a></li>
+<li><a href='/notes/'>Notes</a></li>
+<li><a href='/about'>About</a></li>
 </ul>
 </div>
 </div>
@@ -271,43 +260,43 @@
 <h2>Table des matières</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org4f1877c">bash</a>
+<li><a href="#org68a4589">bash</a>
 <ul>
-<li><a href="#org69e489b">grep, sed et cie</a>
+<li><a href="#org4e7cb2f">grep, sed et cie</a>
 <ul>
-<li><a href="#org58f0fed">Isoler du texte entre deux mots</a></li>
-<li><a href="#org856f54a">Plusieurs motifs en une commande</a></li>
-<li><a href="#orgacb94b0">Colorer la sortie dans le terminal</a></li>
-<li><a href="#org0b40119">Inverser le sens de less</a></li>
-<li><a href="#org6ebb660">Compter le nombre de fichiers dans un dossier</a></li>
-<li><a href="#orge1917c4">Arrêter un script si la commande précédente a donné une erreur</a></li>
-<li><a href="#org9897b34">Convertir un pdf en jpg</a></li>
-<li><a href="#orge65b044">Compresser en parallèle avec pbzip2</a></li>
+<li><a href="#orgfd44be3">Isoler du texte entre deux mots</a></li>
+<li><a href="#org95daa58">Plusieurs motifs en une commande</a></li>
+<li><a href="#orgcdfc37f">Colorer la sortie dans le terminal</a></li>
+<li><a href="#org5cd42c8">Inverser le sens de less</a></li>
+<li><a href="#orgb3a256c">Compter le nombre de fichiers dans un dossier</a></li>
+<li><a href="#orgeaafd14">Arrêter un script si la commande précédente a donné une erreur</a></li>
+<li><a href="#orgf3f66ef">Convertir un pdf en jpg</a></li>
+<li><a href="#org7fc93f5">Compresser en parallèle avec pbzip2</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orga709691">org-mode</a>
+<li><a href="#orgb527cfc">org-mode</a>
 <ul>
-<li><a href="#orge6103ac">Gérer les liens internes dans l'export html</a></li>
-<li><a href="#org6260077">Exporter un tableau org en html</a></li>
+<li><a href="#org3a88ec2">Gérer les liens internes dans l'export html</a></li>
+<li><a href="#orge081508">Exporter un tableau org en html</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org4f1877c" class="outline-2">
-<h2 id="org4f1877c">bash</h2>
-<div class="outline-text-2" id="text-org4f1877c">
+<div id="outline-container-org68a4589" class="outline-2">
+<h2 id="org68a4589">bash</h2>
+<div class="outline-text-2" id="text-org68a4589">
 </div>
-<div id="outline-container-org69e489b" class="outline-3">
-<h3 id="org69e489b">grep, sed et cie</h3>
-<div class="outline-text-3" id="text-org69e489b">
+<div id="outline-container-org4e7cb2f" class="outline-3">
+<h3 id="org4e7cb2f">grep, sed et cie</h3>
+<div class="outline-text-3" id="text-org4e7cb2f">
 </div>
-<div id="outline-container-org58f0fed" class="outline-4">
-<h4 id="org58f0fed">Isoler du texte entre deux mots</h4>
-<div class="outline-text-4" id="text-org58f0fed">
+<div id="outline-container-orgfd44be3" class="outline-4">
+<h4 id="orgfd44be3">Isoler du texte entre deux mots</h4>
+<div class="outline-text-4" id="text-orgfd44be3">
 <pre><code class="language-bash">
 cat tmp | grep -o -P '(?<=foo).*(?=bar)'
 </code></pre>
@@ -317,33 +306,30 @@ tmp.
 </p>
 </div>
 </div>
-<div id="outline-container-org856f54a" class="outline-4">
-<h4 id="org856f54a">Plusieurs motifs en une commande</h4>
-<div class="outline-text-4" id="text-org856f54a">
-<div class="org-src-container">
-<pre class="src src-sh">grep <span style="color: #8abeb7;">'word1\|word2\|word3'</span> file
-</pre>
-</div>
+<div id="outline-container-org95daa58" class="outline-4">
+<h4 id="org95daa58">Plusieurs motifs en une commande</h4>
+<div class="outline-text-4" id="text-org95daa58">
+<pre><code class="language-bash">
+grep 'word1\|word2\|word3' file
+</code></pre>
 <p>
 ou avec <i>egrep</i> &lt;=&gt; <i>grep -e</i> pour ne pas avoir les antislashs :
 </p>
-<div class="org-src-container">
-<pre class="src src-sh">egrep <span style="color: #8abeb7;">'word1|word2|word3'</span> file
-</pre>
+<pre><code class="language-bash">
+egrep 'word1|word2|word3' file
+</code></pre>
 </div>
 </div>
-</div>
-<div id="outline-container-orgacb94b0" class="outline-4">
-<h4 id="orgacb94b0">Colorer la sortie dans le terminal</h4>
-<div class="outline-text-4" id="text-orgacb94b0">
-</div>
-<ul class="org-ul">
-<li><a id="orgd987ce2"></a>less<br>
-<div class="outline-text-5" id="text-orgd987ce2">
-<div class="org-src-container">
-<pre class="src src-sh"><span style="color: #b5bd68;">function</span> <span style="color: #de935f;">cless</span><span style="color: #c5c8c6;">()</span> <span style="color: #c5c8c6;">{</span> pygmentize -O <span style="color: #f0c674;">encoding</span>=latin1,<span style="color: #f0c674;">style</span>=emacs -g <span style="color: #8abeb7;">"$@"</span> | less -R; <span style="color: #c5c8c6;">}</span>
-</pre>
-</div>
+
+<div id="outline-container-orgcdfc37f" class="outline-4">
+<h4 id="orgcdfc37f">Colorer la sortie dans le terminal</h4>
+<div class="outline-text-4" id="text-orgcdfc37f">
+<p>
+Pour less:
+</p>
+<pre><code class="language-bash">
+function cless() { pygmentize -O encoding=latin1,style=emacs -g "$@" | less -R; }
+</code></pre>
 <p>
 Utilisation du script python pygmentize pour colorer le script passé
 en argument ($@). On spécifie latin1 en encodage sinon il bug sur les
@@ -352,29 +338,25 @@ de ne pas spécifier le <i>lexer</i> et de deviner le type de script passé
 en argument. On pipe le tout dans <i>less</i> avec l'option -R qui va
 interprêter les codes couleurs.
 </p>
-</div>
-</li>
-<li><a id="org33aaff1"></a>cat<br>
-<div class="outline-text-5" id="text-org33aaff1">
-<div class="org-src-container">
-<pre class="src src-sh"><span style="color: #b294bb;">alias</span> <span style="color: #f0c674;">ccat</span>=<span style="color: #8abeb7;">'pygmentize -g -O style=colorful,linenos=1,encoding=latin1'</span>
-</pre>
-</div>
+
+<p>
+Et pour cat :
+</p>
+<pre><code class="language-bash">
+alias ccat='pygmentize -g -O style=colorful,linenos=1,encoding=latin1'
+</code></pre>
 <p>
 Identique à la commande précédente.
 </p>
 </div>
-</li>
-</ul>
 </div>
 
-<div id="outline-container-org0b40119" class="outline-4">
-<h4 id="org0b40119">Inverser le sens de less</h4>
-<div class="outline-text-4" id="text-org0b40119">
-<div class="org-src-container">
-<pre class="src src-sh"><span style="color: #b5bd68;">function</span> <span style="color: #de935f;">iless</span><span style="color: #c5c8c6;">()</span> <span style="color: #c5c8c6;">{</span> tac <span style="color: #8abeb7;">"$@"</span> | less; <span style="color: #c5c8c6;">}</span>
-</pre>
-</div>
+<div id="outline-container-org5cd42c8" class="outline-4">
+<h4 id="org5cd42c8">Inverser le sens de less</h4>
+<div class="outline-text-4" id="text-org5cd42c8">
+<pre><code class="language-bash">
+function iless() { tac "$@" | less; }
+</code></pre>
 <p>
 La commande tac est un cat à l'envers, elle affiche le fichier par la fin. On le pipe dans less pour
 faire défiler.
@@ -382,63 +364,58 @@ faire défiler.
 </div>
 </div>
 
-<div id="outline-container-org6ebb660" class="outline-4">
-<h4 id="org6ebb660">Compter le nombre de fichiers dans un dossier</h4>
-<div class="outline-text-4" id="text-org6ebb660">
-<div class="org-src-container">
-<pre class="src src-sh"><span style="color: #b294bb;">alias</span> <span style="color: #f0c674;">countfiles</span>=<span style="color: #8abeb7;">"find . -type f -print0 | tr -d -c '\0' | wc -c"</span>
-</pre>
-</div>
+<div id="outline-container-orgb3a256c" class="outline-4">
+<h4 id="orgb3a256c">Compter le nombre de fichiers dans un dossier</h4>
+<div class="outline-text-4" id="text-orgb3a256c">
+<pre><code class="language-bash">
+alias countfiles="find . -type f -print0 | tr -d -c '\0' | wc -c"
+</code></pre>
 <p>
 Trouver sur stackexchange. Possibilité de faire <i>find . -type f | wc -l</i> également.
 </p>
 </div>
 </div>
-<div id="outline-container-orge1917c4" class="outline-4">
-<h4 id="orge1917c4">Arrêter un script si la commande précédente a donné une erreur</h4>
-<div class="outline-text-4" id="text-orge1917c4">
+<div id="outline-container-orgeaafd14" class="outline-4">
+<h4 id="orgeaafd14">Arrêter un script si la commande précédente a donné une erreur</h4>
+<div class="outline-text-4" id="text-orgeaafd14">
 <p>
 On récupère le code de sortie d'exécution de la commande précédente. Si elle est différente de 1, on
 quitte.
 </p>
-<div class="org-src-container">
-<pre class="src src-sh"><span style="color: #f0c674;">rc</span>=$<span style="color: #f0c674;">?</span>; <span style="color: #b5bd68;">if</span> <span style="color: #c5c8c6;">[</span><span style="color: #8abeb7;">[</span> $<span style="color: #f0c674;">rc</span> != 0 <span style="color: #8abeb7;">]</span><span style="color: #c5c8c6;">]</span>; <span style="color: #b5bd68;">then exit</span> $<span style="color: #f0c674;">rc</span>; <span style="color: #b5bd68;">fi</span>
-</pre>
-</div>
+<pre><code class="language-bash">
+rc=$?; if [[ $rc != 0 ]]; then exit $rc; fi
+</code></pre>
 <p>
 Le plus simple étant de définir
 </p>
-<div class="org-src-container">
-<pre class="src src-sh"><span style="color: #b294bb;">set</span> -e
-</pre>
-</div>
+<pre><code class="language-bash">
+set -e
+</code></pre>
 <p>
 en début de script.
 </p>
 </div>
 </div>
-<div id="outline-container-org9897b34" class="outline-4">
-<h4 id="org9897b34">Convertir un pdf en jpg</h4>
-<div class="outline-text-4" id="text-org9897b34">
+<div id="outline-container-orgf3f66ef" class="outline-4">
+<h4 id="orgf3f66ef">Convertir un pdf en jpg</h4>
+<div class="outline-text-4" id="text-orgf3f66ef">
 <p>
 Avec imagemagic :
 </p>
-<div class="org-src-container">
-<pre class="src src-sh">convert -density 300 -trim test.pdf -quality 100 test.jpg
-</pre>
+<pre><code class="language-bash">
+convert -density 300 -trim test.pdf -quality 100 test.jpg
+</code></pre>
 </div>
 </div>
-</div>
-<div id="outline-container-orge65b044" class="outline-4">
-<h4 id="orge65b044">Compresser en parallèle avec pbzip2</h4>
-<div class="outline-text-4" id="text-orge65b044">
+<div id="outline-container-org7fc93f5" class="outline-4">
+<h4 id="org7fc93f5">Compresser en parallèle avec pbzip2</h4>
+<div class="outline-text-4" id="text-org7fc93f5">
 <p>
 À compiler soi-même si besoin. Exemple de commande qui fonctionne :
 </p>
-<div class="org-src-container">
-<pre class="src src-sh">tar cf BIBLIO2.tar.bz2 --use-compress-prog=/PATH/TO/pbzip2 BIBLIOGRAPHIE/
-</pre>
-</div>
+<pre><code class="language-bash">
+tar cf BIBLIO2.tar.bz2 --use-compress-prog=/PATH/TO/pbzip2 BIBLIOGRAPHIE/
+</code></pre>
 <p>
 Utilise automatiquement tous les CPU disponibles.
 </p>
@@ -447,13 +424,13 @@ Utilise automatiquement tous les CPU disponibles.
 </div>
 </div>
 
-<div id="outline-container-orga709691" class="outline-2">
-<h2 id="orga709691">org-mode</h2>
-<div class="outline-text-2" id="text-orga709691">
+<div id="outline-container-orgb527cfc" class="outline-2">
+<h2 id="orgb527cfc">org-mode</h2>
+<div class="outline-text-2" id="text-orgb527cfc">
 </div>
-<div id="outline-container-orge6103ac" class="outline-3">
-<h3 id="orge6103ac">Gérer les liens internes dans l'export html</h3>
-<div class="outline-text-3" id="text-orge6103ac">
+<div id="outline-container-org3a88ec2" class="outline-3">
+<h3 id="org3a88ec2">Gérer les liens internes dans l'export html</h3>
+<div class="outline-text-3" id="text-org3a88ec2">
 <p>
 Pour les besoins de ce site, je souhaitais faire un lien vers un
 fichier de note dans un post de blog. Pour que le lien soit
@@ -462,9 +439,9 @@ correctement géré, il fait ajouter la variable locale
 </p>
 </div>
 </div>
-<div id="outline-container-org6260077" class="outline-3">
-<h3 id="org6260077">Exporter un tableau org en html</h3>
-<div class="outline-text-3" id="text-org6260077">
+<div id="outline-container-orge081508" class="outline-3">
+<h3 id="orge081508">Exporter un tableau org en html</h3>
+<div class="outline-text-3" id="text-orge081508">
 <p>
 On part du tableau suivant :
 </p>
@@ -516,8 +493,8 @@ qui donne :
 <div id="postamble" class="status">
 <div class='footer'>
 <a href='http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1' target='_blank' rel='license noopener noreferrer' style='display:inline-block;'><img style='border:0;height:22px!important;width=22px;margin-left:3px;vertical-align:text-bottom;' src='/images/licence/cc.svg'><img style='border:0;height:22px!important;width=22px;margin-left:3px;vertical-align:text-bottom;' src='/images/licence/by.svg'><img style='border:0;height:22px!important;width=22px;margin-left:3px;vertical-align:text-bottom;' src='/images/licence/sa.svg'></a><br/>
-Last updated 2021-01-28 jeu. 18:56. <br/>
-Built with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 26.1 (<a href="https://orgmode.org">Org</a> mode).
+Last updated 2021-02-13 sam. 18:07.<br/>
+Built with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 26.1 (<a href="https://orgmode.org">Org</a> mode ).
 </div>
 <script src='/js/main.js'></script>
 </div>

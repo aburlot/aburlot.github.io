@@ -195,6 +195,11 @@ p + table {
     margin-bottom: 1.5em;
 }
 
+p + div.code-toolbar {
+    margin-top: -1.5em;
+    margin-bottom: 1.5em;
+}
+
 p.centered {
     text-align: center;
     margin: 3em 0;
