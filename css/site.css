@@ -37,14 +37,17 @@ body .intro {
 body .nav {
     text-align: center;
     margin-top: 15px;
-    border-bottom: 1px solid #e2e2e2;
+    border-bottom: 1px solid #999;
     font-variant: small-caps;
+    font-family: Fira Sans, Sans;
     /* font-size: 12px; */
     /* text-transform: uppercase; */
 }
 body .nav ul {
     list-style: none;
     padding: 0;
+    margin-top: 6px;
+    margin-bottom: 12px;
 }
 body .nav ul li {
     color: #999;
@@ -53,10 +56,13 @@ body .nav ul li {
 }
 body .nav ul li a {
     display: inline-block;
-    padding-right: 6px;
+    padding-right: 3px;
+    padding-left: 3px;
     border-radius: 0;
     font-weight: normal;
     color: #6a6a6a;
+    border-bottom: none;
+    font-family: Fira Sans, Sans;
 }
 /* body .nav ul li i { */
 /*   font-size: 2em; */
@@ -65,13 +71,16 @@ body .nav ul li a {
 body a {
     text-decoration: none;
     /* color: #C25200; */
-    color: #00445C;
+    color: #1454FF;
     transition: .2s all ease-in;
+    font-family: Roboto, Sans;
+    /* border-bottom: 1px dashed lightgrey; */
 }
 body a:hover {
     /* color: #C2000F;/\*#3E0C5C;*\/ */
-    color: #05005C;
+    color: #6814FF;
     text-decoration: italic;
+    /* border-bottom: 1px solid lightgrey; */
 }
 
 /* Gestion des images */
@@ -103,12 +112,16 @@ body #content {
     margin-top: 10px;
 }
 body #postamble {
-    border-top: 1px solid #e2e2e2;
+    border-top: 1px solid #999;
     line-height: 1.4em;
     text-align: center;
     font-size: x-small;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+body #postamble a {
+    border-bottom: none;
 }
 
 /* body #postamble a { */
@@ -130,28 +143,27 @@ h1 {
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 0px;
-    /* line-height: 1.5em; */
-    /* font-weight: 300; */
+    font-family: Fira Sans, Sans;
 }
 
 h1 a {
     text-decoration:none !important;
     color: black;
+    border-bottom: none;
+    font-family: Fira Sans;
 }
 
-/* h1 span { */
-/*     font-weight: normal; */
-/*     display: block; */
-/*     font-size: 0.8em; */
-/*     line-height: 1em; */
-/* } */
+h1 a:hover {
+    text-decoration:none !important;
+    color: black;
+    border-bottom: none;
+}
+
 
 h2 {
     font-size: xx-large;
     margin-top: 1em;
     margin-bottom: 0.4em;
-    /* font-weight: 500; */
-    /* line-height: 2em; */
 }
 
 h3 {
@@ -300,4 +312,12 @@ table {
 .lienspotify {
     padding-top: 2px;
     padding-bottom: 1px;
+}
+
+.linkonimage {
+    border-bottom: none;
+}
+
+.linkonimage a:hover {
+    border-bottom: none;
 }
