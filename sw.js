@@ -1,9 +1,11 @@
-var cacheName = 'test-pwa';
+var cacheName = 'my-pwa-1';
 var filesToCache = [
-  '/',
-  '/index.html',
-  '/css/site.css',
-  '/js/main.js'
+    '/',
+    '/index.html',
+    '/css/site.css',
+    '/js/main.js',
+    '/notes/*.html',
+    '/css/*'
 ];
 
 /* Start the service worker and cache all of the app's content */
@@ -24,14 +26,32 @@ self.addEventListener('install', function(e) {
 //   );
 // });
 
-/* Network falling back to cache */
-// https://jakearchibald.com/2014/offline-cookbook/#network-falling-back-to-cache
+/* Stale-while-revalidate */
+// https://jakearchibald.com/2014/offline-cookbook/#stale-while-revalidate
 self.addEventListener('fetch', (event) => {
   event.respondWith(async function() {
-    try {
-      return await fetch(event.request);
-    } catch (err) {
-      return caches.match(event.request);
-    }
+    const cache = await caches.open(cacheName);
+    const cachedResponse = await cache.match(event.request);
+    const networkResponsePromise = fetch(event.request);
+
+    event.waitUntil(async function() {
+      const networkResponse = await networkResponsePromise;
+      await cache.put(event.request, networkResponse.clone());
+    }());
+
+    // Returned the cached response if we have one, otherwise return the network response.
+    return cachedResponse || networkResponsePromise;
   }());
 });
+
+/* Network falling back to cache */
+// https://jakearchibald.com/2014/offline-cookbook/#network-falling-back-to-cache
+// self.addEventListener('fetch', (event) => {
+//   event.respondWith(async function() {
+//     try {
+//       return await fetch(event.request);
+//     } catch (err) {
+//       return caches.match(event.request);
+//     }
+//   }());
+// });
