@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-05-22 sam. 23:09 -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 2022-03-05 sam. 22:06 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Notes</title>
-<meta name="generator" content="Org mode">
-<meta name="author" content="Alan Burlot">
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="author" content="Alan Burlot" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -29,8 +29,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -39,21 +40,21 @@
   pre.src {
     position: relative;
     overflow: auto;
-    padding-top: 1.2em;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
   pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -189,7 +190,6 @@
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
-  /*]]>*/-->
 </style>
 <link rel='canonical' href='https://alan.burlot.bzh/' />
 <meta name='author' content='Alan Burlot' />
@@ -216,28 +216,6 @@
 <meta name='theme-color' content='#ffffff'>
 
 <link rel='shortcut icon' href='/images/favicon.png' type='image/x-icon' />
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:1f739d935676111cfff4b4693e3816e664797050&amp;dn=gpl-3.0.txt GPL-v3-or-Later
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
 </head>
 <body>
 <div id="preamble" class="status">
@@ -253,21 +231,22 @@
 </ul>
 </div>
 </div>
-<div id="content">
+<div id="content" class="content">
+<h1 class="title">Notes</h1>
 <div class="org-center">
-<a accesskey="l" class="linkonimage" href="/notes/lecture.html"><img src="/images/tuiles/Lecture.jpeg" border=0 style="border:0; text-decoration:none; outline:none" height="120px" width="120px" alt="Book"/></a>
-<a accesskey="m" class="linkonimage" href="/notes/musique.html"><img src="/images/tuiles/Musique.jpeg" border=0 style="border:0; text-decoration:none; outline:none" height="120px" width="120px" alt="Music"/></a><br/>
-<a accesskey="g" class="linkonimage" href="/notes/glossaire.html"><img src="/images/tuiles/Glossaire.jpeg" border=0 style="border:0; text-decoration:none; outline:none" height="120px" width="120px" alt="Glossary"/></a>
-<a accesskey="i" class="linkonimage" href="/notes/informatique.html"><img src="/images/tuiles/Info.jpeg" border=0 style="border:0; text-decoration:none; outline:none" height="120px" width="120px" alt="Computer"/></a><br/>
-<a accesskey="r" class="linkonimage" href="/notes/rando.html"><img src="/images/tuiles/Rando.jpeg" border=0 style="border:0; text-decoration:none; outline:none" height="120px" width="120px" alt="Hicking"/></a>
-<a accesskey="s" class="linkonimage" href="/notes/sciences.html"><img src="/images/tuiles/Science.jpeg" border=0 style="border:0; text-decoration:none; outline:none" height="120px" width="120px" alt="Science"/></a><br/>
+<a accesskey="l" class="linkonimage" href="/notes/lecture.html"><img src="/images/tuiles/lecture.jpeg" border=0 style="border:0; text-decoration:none; outline:none" height="120px" width="120px" alt="Book"/></a>
+<a accesskey="m" class="linkonimage" href="/notes/musique.html"><img src="/images/tuiles/musique.jpeg" border=0 style="border:0; text-decoration:none; outline:none" height="120px" width="120px" alt="Music"/></a><br/>
+<a accesskey="g" class="linkonimage" href="/notes/glossaire.html"><img src="/images/tuiles/glossaire.jpeg" border=0 style="border:0; text-decoration:none; outline:none" height="120px" width="120px" alt="Glossary"/></a>
+<a accesskey="i" class="linkonimage" href="/notes/informatique.html"><img src="/images/tuiles/info.jpeg" border=0 style="border:0; text-decoration:none; outline:none" height="120px" width="120px" alt="Computer"/></a><br/>
+<a accesskey="r" class="linkonimage" href="/notes/rando.html"><img src="/images/tuiles/rando.jpeg" border=0 style="border:0; text-decoration:none; outline:none" height="120px" width="120px" alt="Hicking"/></a>
+<a accesskey="s" class="linkonimage" href="/notes/sciences.html"><img src="/images/tuiles/science.jpeg" border=0 style="border:0; text-decoration:none; outline:none" height="120px" width="120px" alt="Science"/></a><br/>
 </div>
 </div>
 <div id="postamble" class="status">
 <div class='footer'>
 <a href='http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1' target='_blank' rel='license noopener noreferrer' style='display:inline-block;'><img style='border:0;height:22px!important;width=22px;margin-left:3px;vertical-align:text-bottom;' height='22px' width='22px' src='/images/licence/cc.svg' alt='cc'><img style='border:0;height:22px!important;width=22px;margin-left:3px;vertical-align:text-bottom;' height='22px' width='22px' src='/images/licence/by.svg' alt='by'><img style='border:0;height:22px!important;width=22px;margin-left:3px;vertical-align:text-bottom;' height='22px' width='22px' src='/images/licence/sa.svg' alt='sa'></a><br/>
 Last updated 2021-05-22 sam. 23:09.<br/>
-Built with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 26.1 (<a href="https://orgmode.org">Org</a> mode 9.4.5).
+Built with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 27.1 (<a href="https://orgmode.org">Org</a> mode 9.5.2).
 </div>
 <script src='/js/main.js'></script>
 </div>

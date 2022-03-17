@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- 2021-02-18 jeu. 20:50 -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 2022-03-05 sam. 22:06 -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>About turbulence</title>
-<meta name="generator" content="Org mode">
-<meta name="author" content="Alan Burlot">
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="author" content="Alan Burlot" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -29,8 +29,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -39,21 +40,21 @@
   pre.src {
     position: relative;
     overflow: auto;
-    padding-top: 1.2em;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
   pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -189,11 +190,10 @@
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
-  /*]]>*/-->
 </style>
-<link rel='canonical' href='https://alan.burlot.bzh' />
+<link rel='canonical' href='https://alan.burlot.bzh/' />
 <meta name='author' content='Alan Burlot' />
-<meta name='description' content='Site web personnel, n'engage que moi.' />
+<meta name='description' content='Site web personnel' />
 <meta name='keywords' content='alan,burlot,informatique,emacs,org-mode,musique,lectures' />
 <link rel='preload stylesheet' href='/css/site.css' as='style'/>
 <link rel='preload stylesheet' href='/css/fonts/firasans/fira.css' as='style'/>
@@ -216,28 +216,6 @@
 <meta name='theme-color' content='#ffffff'>
 
 <link rel='shortcut icon' href='/images/favicon.png' type='image/x-icon' />
-<script type="text/javascript">
-// @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
-<!--/*--><![CDATA[/*><!--*/
-     function CodeHighlightOn(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.add("code-highlighted");
-         target.classList.add("code-highlighted");
-       }
-     }
-     function CodeHighlightOff(elem, id)
-     {
-       var target = document.getElementById(id);
-       if(null != target) {
-         elem.classList.remove("code-highlighted");
-         target.classList.remove("code-highlighted");
-       }
-     }
-    /*]]>*///-->
-// @license-end
-</script>
 </head>
 <body>
 <div id="preamble" class="status">
@@ -253,11 +231,11 @@
 </ul>
 </div>
 </div>
-<div id="content">
+<div id="content" class="content">
 
-<div id="outline-container-orgb7af66a" class="outline-2">
-<h2 id="orgb7af66a">La science et l'hypothèse</h2>
-<div class="outline-text-2" id="text-orgb7af66a">
+<div id="outline-container-org12753af" class="outline-2">
+<h2 id="org12753af">La science et l'hypothèse</h2>
+<div class="outline-text-2" id="text-org12753af">
 <p>
 La possibilité même de la science mathématique semble une
 contradiction insoluble. Si cette science n’est déductive qu’en
@@ -289,9 +267,9 @@ ne devrait pas retrouver autre chose dans les conclusions.
 </div>
 </div>
 
-<div id="outline-container-org2719bb3" class="outline-2">
-<h2 id="org2719bb3">Un autre titre</h2>
-<div class="outline-text-2" id="text-org2719bb3">
+<div id="outline-container-org47284a9" class="outline-2">
+<h2 id="org47284a9">Un autre titre</h2>
+<div class="outline-text-2" id="text-org47284a9">
 <p>
 Et du texte.
 </p>
@@ -302,7 +280,7 @@ Et du texte.
 <div class='footer'>
 <a href='http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1' target='_blank' rel='license noopener noreferrer' style='display:inline-block;'><img style='border:0;height:22px!important;width=22px;margin-left:3px;vertical-align:text-bottom;' height='22px' width='22px' src='/images/licence/cc.svg' alt='cc'><img style='border:0;height:22px!important;width=22px;margin-left:3px;vertical-align:text-bottom;' height='22px' width='22px' src='/images/licence/by.svg' alt='by'><img style='border:0;height:22px!important;width=22px;margin-left:3px;vertical-align:text-bottom;' height='22px' width='22px' src='/images/licence/sa.svg' alt='sa'></a><br/>
 Last updated 2020-05-21 jeu. 14:19.<br/>
-Built with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 26.1 (<a href="https://orgmode.org">Org</a> mode 9.4.4).
+Built with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 27.1 (<a href="https://orgmode.org">Org</a> mode 9.5.2).
 </div>
 <script src='/js/main.js'></script>
 </div>

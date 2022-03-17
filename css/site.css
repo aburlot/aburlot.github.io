@@ -322,3 +322,11 @@ table {
 .linkonimage a:hover {
     border-bottom: none;
 }
+
+#demobox {
+  background-color: #ACACAC ;
+  padding: 10px ;
+  height: 120px;
+  width: 120px;
+  /* border: 1px solid green ; */
+}
