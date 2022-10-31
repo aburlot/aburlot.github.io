@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- 2022-03-05 sam. 22:06 -->
+<!-- 2022-10-31 lun. 17:34 -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Des notes informatiques</title>
@@ -189,7 +189,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
+  .org-svg { }
 </style>
 <link rel='canonical' href='https://alan.burlot.bzh/' />
 <meta name='author' content='Alan Burlot' />
@@ -235,48 +235,49 @@
 </div>
 </div>
 <div id="content" class="content">
-<h1 class="title">Des notes informatiques</h1>
 <div id="table-of-contents" role="doc-toc">
 <h2>Table des matières</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org2d3fe87">bash</a>
+<li><a href="#org6efc081">bash</a>
 <ul>
-<li><a href="#org171c484">grep, sed et cie</a>
+<li><a href="#orgc3b42ff">grep, sed et cie</a>
 <ul>
-<li><a href="#orgb1a955b">Isoler du texte entre deux mots</a></li>
-<li><a href="#org1043a01">Plusieurs motifs en une commande</a></li>
-<li><a href="#orgbbc515a">Colorer la sortie dans le terminal</a></li>
-<li><a href="#org4fa0a39">Inverser le sens de less</a></li>
-<li><a href="#org6aaf121">Compter le nombre de fichiers dans un dossier</a></li>
-<li><a href="#org2b06b9a">Arrêter un script si la commande précédente a donné une erreur</a></li>
-<li><a href="#orgdd14f2a">Convertir un pdf en jpg</a></li>
-<li><a href="#org90b3370">Compresser en parallèle avec pbzip2</a></li>
+<li><a href="#org401d480">Isoler du texte entre deux mots</a></li>
+<li><a href="#org904dd10">Plusieurs motifs en une commande</a></li>
+<li><a href="#org08d2cda">Colorer la sortie dans le terminal</a></li>
+<li><a href="#org3b75de7">Inverser le sens de less</a></li>
+<li><a href="#org819340b">Compter le nombre de fichiers dans un dossier</a></li>
+<li><a href="#org346feb2">Arrêter un script si la commande précédente a donné une erreur</a></li>
+<li><a href="#org243dec5">Convertir un pdf en jpg</a></li>
+<li><a href="#orgad39ee0">Compresser en parallèle avec pbzip2</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org12a59eb">org-mode</a>
+<li><a href="#org82cf48d">org-mode</a>
 <ul>
-<li><a href="#org5a87a92">Gérer les liens internes dans l'export html</a></li>
-<li><a href="#org9f06a9e">Exporter un tableau org en html</a></li>
+<li><a href="#org4981cb6">Gérer les liens internes dans l'export html</a></li>
+<li><a href="#org497dce1">Exporter un tableau org en html</a></li>
+<li><a href="#orgad719fd">Compiler automatiquement via github</a></li>
+<li><a href="#org97f2c04">Org-roam pour le microblogging et la réflexion</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org2d3fe87" class="outline-2">
-<h2 id="org2d3fe87">bash</h2>
-<div class="outline-text-2" id="text-org2d3fe87">
+<div id="outline-container-org6efc081" class="outline-2">
+<h2 id="org6efc081">bash</h2>
+<div class="outline-text-2" id="text-org6efc081">
 </div>
-<div id="outline-container-org171c484" class="outline-3">
-<h3 id="org171c484">grep, sed et cie</h3>
-<div class="outline-text-3" id="text-org171c484">
+<div id="outline-container-orgc3b42ff" class="outline-3">
+<h3 id="orgc3b42ff">grep, sed et cie</h3>
+<div class="outline-text-3" id="text-orgc3b42ff">
 </div>
-<div id="outline-container-orgb1a955b" class="outline-4">
-<h4 id="orgb1a955b">Isoler du texte entre deux mots</h4>
-<div class="outline-text-4" id="text-orgb1a955b">
+<div id="outline-container-org401d480" class="outline-4">
+<h4 id="org401d480">Isoler du texte entre deux mots</h4>
+<div class="outline-text-4" id="text-org401d480">
 <pre><code class="language-bash">
 cat tmp | grep -o -P '(?<=foo).*(?=bar)'
 </code></pre>
@@ -286,9 +287,9 @@ tmp.
 </p>
 </div>
 </div>
-<div id="outline-container-org1043a01" class="outline-4">
-<h4 id="org1043a01">Plusieurs motifs en une commande</h4>
-<div class="outline-text-4" id="text-org1043a01">
+<div id="outline-container-org904dd10" class="outline-4">
+<h4 id="org904dd10">Plusieurs motifs en une commande</h4>
+<div class="outline-text-4" id="text-org904dd10">
 <pre><code class="language-bash">
 grep 'word1\|word2\|word3' file
 </code></pre>
@@ -301,9 +302,9 @@ egrep 'word1|word2|word3' file
 </div>
 </div>
 
-<div id="outline-container-orgbbc515a" class="outline-4">
-<h4 id="orgbbc515a">Colorer la sortie dans le terminal</h4>
-<div class="outline-text-4" id="text-orgbbc515a">
+<div id="outline-container-org08d2cda" class="outline-4">
+<h4 id="org08d2cda">Colorer la sortie dans le terminal</h4>
+<div class="outline-text-4" id="text-org08d2cda">
 <p>
 Pour less:
 </p>
@@ -331,9 +332,9 @@ Identique à la commande précédente.
 </div>
 </div>
 
-<div id="outline-container-org4fa0a39" class="outline-4">
-<h4 id="org4fa0a39">Inverser le sens de less</h4>
-<div class="outline-text-4" id="text-org4fa0a39">
+<div id="outline-container-org3b75de7" class="outline-4">
+<h4 id="org3b75de7">Inverser le sens de less</h4>
+<div class="outline-text-4" id="text-org3b75de7">
 <pre><code class="language-bash">
 function iless() { tac "$@" | less; }
 </code></pre>
@@ -344,9 +345,9 @@ faire défiler.
 </div>
 </div>
 
-<div id="outline-container-org6aaf121" class="outline-4">
-<h4 id="org6aaf121">Compter le nombre de fichiers dans un dossier</h4>
-<div class="outline-text-4" id="text-org6aaf121">
+<div id="outline-container-org819340b" class="outline-4">
+<h4 id="org819340b">Compter le nombre de fichiers dans un dossier</h4>
+<div class="outline-text-4" id="text-org819340b">
 <pre><code class="language-bash">
 alias countfiles="find . -type f -print0 | tr -d -c '\0' | wc -c"
 </code></pre>
@@ -355,9 +356,9 @@ Trouver sur stackexchange. Possibilité de faire <i>find . -type f | wc -l</i> �
 </p>
 </div>
 </div>
-<div id="outline-container-org2b06b9a" class="outline-4">
-<h4 id="org2b06b9a">Arrêter un script si la commande précédente a donné une erreur</h4>
-<div class="outline-text-4" id="text-org2b06b9a">
+<div id="outline-container-org346feb2" class="outline-4">
+<h4 id="org346feb2">Arrêter un script si la commande précédente a donné une erreur</h4>
+<div class="outline-text-4" id="text-org346feb2">
 <p>
 On récupère le code de sortie d'exécution de la commande précédente. Si elle est différente de 1, on
 quitte.
@@ -376,9 +377,9 @@ en début de script.
 </p>
 </div>
 </div>
-<div id="outline-container-orgdd14f2a" class="outline-4">
-<h4 id="orgdd14f2a">Convertir un pdf en jpg</h4>
-<div class="outline-text-4" id="text-orgdd14f2a">
+<div id="outline-container-org243dec5" class="outline-4">
+<h4 id="org243dec5">Convertir un pdf en jpg</h4>
+<div class="outline-text-4" id="text-org243dec5">
 <p>
 Avec imagemagic :
 </p>
@@ -387,9 +388,9 @@ convert -density 300 -trim test.pdf -quality 100 test.jpg
 </code></pre>
 </div>
 </div>
-<div id="outline-container-org90b3370" class="outline-4">
-<h4 id="org90b3370">Compresser en parallèle avec pbzip2</h4>
-<div class="outline-text-4" id="text-org90b3370">
+<div id="outline-container-orgad39ee0" class="outline-4">
+<h4 id="orgad39ee0">Compresser en parallèle avec pbzip2</h4>
+<div class="outline-text-4" id="text-orgad39ee0">
 <p>
 À compiler soi-même si besoin. Exemple de commande qui fonctionne :
 </p>
@@ -404,13 +405,13 @@ Utilise automatiquement tous les CPU disponibles.
 </div>
 </div>
 
-<div id="outline-container-org12a59eb" class="outline-2">
-<h2 id="org12a59eb">org-mode</h2>
-<div class="outline-text-2" id="text-org12a59eb">
+<div id="outline-container-org82cf48d" class="outline-2">
+<h2 id="org82cf48d">org-mode</h2>
+<div class="outline-text-2" id="text-org82cf48d">
 </div>
-<div id="outline-container-org5a87a92" class="outline-3">
-<h3 id="org5a87a92">Gérer les liens internes dans l'export html</h3>
-<div class="outline-text-3" id="text-org5a87a92">
+<div id="outline-container-org4981cb6" class="outline-3">
+<h3 id="org4981cb6">Gérer les liens internes dans l'export html</h3>
+<div class="outline-text-3" id="text-org4981cb6">
 <p>
 Pour les besoins de ce site, je souhaitais faire un lien vers un
 fichier de note dans un post de blog. Pour que le lien soit
@@ -419,9 +420,9 @@ correctement géré, il fait ajouter la variable locale
 </p>
 </div>
 </div>
-<div id="outline-container-org9f06a9e" class="outline-3">
-<h3 id="org9f06a9e">Exporter un tableau org en html</h3>
-<div class="outline-text-3" id="text-org9f06a9e">
+<div id="outline-container-org497dce1" class="outline-3">
+<h3 id="org497dce1">Exporter un tableau org en html</h3>
+<div class="outline-text-3" id="text-org497dce1">
 <p>
 On part du tableau suivant :
 </p>
@@ -468,13 +469,131 @@ qui donne :
 </table>
 </div>
 </div>
+<div id="outline-container-orgad719fd" class="outline-3">
+<h3 id="orgad719fd">Compiler automatiquement via github</h3>
+<div class="outline-text-3" id="text-orgad719fd">
+<p>
+Prendre appui sur <a href="https://duncan.codes/posts/2019-09-03-migrating-from-jekyll-to-org/">ce post</a> pour automatiser la publication de mon blog
+statique.
+</p>
+
+<p>
+L'objectif est de minimiser les actions à faire pour publier mon site
+web. Je ne traiterai que de la partie en org, ferait un commit et le
+site serait automatiquement mis à jour via les GitHub Actions.
+</p>
+
+<p>
+Il utiliser un fichier build.sh :
+</p>
+<div class="org-src-container">
+<pre class="src src-bash"><span style="color: #969896; font-style: italic;">#</span><span style="color: #969896; font-style: italic;">!/bin/</span><span style="color: #b5bd68;">sh</span>
+emacs --batch --no-init-file --load publish.el --funcall toggle-debug-on-error --funcall duncan-publish-all
+</pre>
+</div>
+
+<p>
+Il a un makefile associé :
+</p>
+<div class="org-src-container">
+<pre class="src src-makefile"><span style="color: #de935f;">all</span>: site
+
+<span style="color: #de935f;">site</span>:
+        ./build.sh
+
+<span style="color: #de935f;">site-container</span>:
+        <span style="color: #de935f;">podman run -ti --network host -v $</span><span style="color: #c5c8c6;">(</span><span style="color: #de935f;">shell</span><span style="color: #de935f;"> pwd</span><span style="color: #c5c8c6;">)</span>:/workspace iquiw/alpine-emacs sh -c <span style="color: #8abeb7;">"cd /workspace; </span><span style="color: #8abeb7;">./build.sh"</span>
+
+<span style="color: #de935f;">clean</span>:
+        rm -rf public/*
+</pre>
+</div>
+<p>
+La function de publication finale est définie dans le publish.el. J'ai
+un fichier équivalent nettement moins fourni. Cela facilitera
+l'usage. Mais il y a insère tout pour le rendre autonome :
+</p>
+<div class="org-src-container">
+<pre class="src src-elisp"><span style="color: #c5c8c6;">(</span><span style="color: #b5bd68;">require</span> '<span style="color: #81a2be;">package</span><span style="color: #c5c8c6;">)</span>
+<span style="color: #c5c8c6;">(</span>package-initialize<span style="color: #c5c8c6;">)</span>
+<span style="color: #c5c8c6;">(</span><span style="color: #b5bd68;">setq</span> package-archives '<span style="color: #8abeb7;">(</span><span style="color: #f0c674;">(</span><span style="color: #8abeb7;">"elpa"</span> . <span style="color: #8abeb7;">"http://elpa.gnu.org/packages/"</span><span style="color: #f0c674;">)</span>
+                         <span style="color: #f0c674;">(</span><span style="color: #8abeb7;">"nongnu"</span> . <span style="color: #8abeb7;">"https://elpa.nongnu.org/nongnu/"</span><span style="color: #f0c674;">)</span>
+                         <span style="color: #f0c674;">(</span><span style="color: #8abeb7;">"melpa"</span> . <span style="color: #8abeb7;">"https://melpa.org/packages/"</span><span style="color: #f0c674;">)</span><span style="color: #8abeb7;">)</span><span style="color: #c5c8c6;">)</span>
+<span style="color: #c5c8c6;">(</span>package-refresh-contents<span style="color: #c5c8c6;">)</span>
+<span style="color: #c5c8c6;">(</span><span style="color: #b5bd68;">dolist</span> <span style="color: #8abeb7;">(</span>pkg '<span style="color: #f0c674;">(</span>dash projectile org-contrib yaml-mode htmlize<span style="color: #f0c674;">)</span><span style="color: #8abeb7;">)</span>
+  <span style="color: #8abeb7;">(</span><span style="color: #b5bd68;">unless</span> <span style="color: #f0c674;">(</span>package-installed-p pkg<span style="color: #f0c674;">)</span>
+    <span style="color: #f0c674;">(</span>package-install pkg<span style="color: #f0c674;">)</span><span style="color: #8abeb7;">)</span><span style="color: #c5c8c6;">)</span>
+
+<span style="color: #c5c8c6;">(</span><span style="color: #b5bd68;">require</span> '<span style="color: #81a2be;">dash</span><span style="color: #c5c8c6;">)</span>
+<span style="color: #c5c8c6;">(</span><span style="color: #b5bd68;">require</span> '<span style="color: #81a2be;">org</span><span style="color: #c5c8c6;">)</span>
+<span style="color: #c5c8c6;">(</span><span style="color: #b5bd68;">require</span> '<span style="color: #81a2be;">ox-rss</span><span style="color: #c5c8c6;">)</span>
+<span style="color: #c5c8c6;">(</span><span style="color: #b5bd68;">require</span> '<span style="color: #81a2be;">ox-publish</span><span style="color: #c5c8c6;">)</span>
+<span style="color: #c5c8c6;">(</span><span style="color: #b5bd68;">require</span> '<span style="color: #81a2be;">projectile</span><span style="color: #c5c8c6;">)</span>
+</pre>
+</div>
+<p>
+C'est le début du fichier, afin qu'il soit autonome pour une
+utilisation en batch.
+</p>
+
+<p>
+Il utilise les GitHub Actions suivantes :
+</p>
+<div class="org-src-container">
+<pre class="src src-yaml">name: Build and publish to pages
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+      with:
+        fetch-depth: 1
+    - name: build
+      uses: docker://iquiw/alpine-emacs
+      if: github.event.deleted == false
+      with:
+        args: ./build.sh
+    - name: deploy
+      uses: peaceiris/actions-gh-pages@v3
+      if: success()
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./public
+</pre>
+</div>
+
+<p>
+Il utilise une image alpine-emacs qu'il a compilé ?
+</p>
+
+<p>
+Un workflow complet serait le suivant : auto-hébergement du site sur
+mon raspberry pi avec un reverse proxy. Lien entre les notes prises
+sur le téléphone et le site web. Utilisation d'org-roam pour
+microblogguer.
+</p>
+</div>
+</div>
+<div id="outline-container-org97f2c04" class="outline-3">
+<h3 id="org97f2c04">Org-roam pour le microblogging et la réflexion</h3>
+<div class="outline-text-3" id="text-org97f2c04">
+<p>
+Information complète sur <a href="https://lucidmanager.org/productivity/taking-notes-with-emacs-org-mode-and-org-roam/">ce site</a>.
+</p>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <div class='footer'>
 <a href='http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1' target='_blank' rel='license noopener noreferrer' style='display:inline-block;'><img style='border:0;height:22px!important;width=22px;margin-left:3px;vertical-align:text-bottom;' height='22px' width='22px' src='/images/licence/cc.svg' alt='cc'><img style='border:0;height:22px!important;width=22px;margin-left:3px;vertical-align:text-bottom;' height='22px' width='22px' src='/images/licence/by.svg' alt='by'><img style='border:0;height:22px!important;width=22px;margin-left:3px;vertical-align:text-bottom;' height='22px' width='22px' src='/images/licence/sa.svg' alt='sa'></a><br/>
-Last updated 2021-02-18 jeu. 20:53.<br/>
-Built with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 27.1 (<a href="https://orgmode.org">Org</a> mode 9.5.2).
+Last updated 2022-07-17 dim. 11:59.<br/>
+Built with <a href="https://www.gnu.org/software/emacs/">Emacs</a> 27.1 (<a href="https://orgmode.org">Org</a> mode 9.5.5).
 </div>
 <script src='/js/main.js'></script>
 </div>
